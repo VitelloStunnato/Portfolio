@@ -88,6 +88,9 @@ export default function Contact() {
           <p className="text-muted text-sm md:text-base">
             Designed with love, all rights reserved for {profile.name}.
           </p>
+          <p className="text-muted/60 text-xs pt-1">
+            All logos and trademarks belong to their respective owners.
+          </p>
         </div>
 
         {/* Pulsanti Social con effetto 3D (Hover / Active) */}
