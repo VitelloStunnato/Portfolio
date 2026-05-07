@@ -7,12 +7,14 @@ import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import ScrollToTop from "@/components/ScrollToTop";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <AnimatedBackground />
       <Navbar />
-      <main className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 pt-32 pb-20 lg:pt-40 lg:pb-32 space-y-32">
+      <main className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 pt-32 pb-20 lg:pt-40 lg:pb-32 space-y-32">
         <Hero />
         <ClientsMarquee />
         <About />

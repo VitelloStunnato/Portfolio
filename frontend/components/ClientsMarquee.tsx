@@ -13,23 +13,33 @@ export default function ClientsMarquee() {
   ];
 
   return (
-    <div className="w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-surface/50 border-y border-border py-8 overflow-hidden flex items-center group">
-      {/* Sfumature ai bordi per un ingresso/uscita fluido */}
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+    <div className="w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-surface/50 border-y border-border py-8 overflow-hidden flex flex-col group">
+      
+      {/* Titolo Descrittivo */}
+      <div className="w-full mb-6">
+        <p className="text-center text-xs md:text-sm font-semibold text-muted/60 uppercase tracking-[0.2em]">
+          Clienti e aziende con cui ho collaborato
+        </p>
+      </div>
 
-      <div className="flex animate-marquee whitespace-nowrap items-center">
-        {/* Ripetiamo la lista due volte per creare il loop infinito continuo */}
-        {[...clients, ...clients].map((client, idx) => (
-          <div key={idx} className="mx-12 flex-shrink-0 flex items-center justify-center">
-            <img 
-              src={client.logo} 
-              alt={client.name} 
-              title={client.name}
-              className="h-10 w-auto object-contain filter brightness-0 invert opacity-50 hover:opacity-100 transition-opacity" 
-            />
-          </div>
-        ))}
+      <div className="relative w-full flex items-center">
+        {/* Sfumature ai bordi per un ingresso/uscita fluido */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none"></div>
+
+        <div className="flex animate-marquee whitespace-nowrap items-center">
+          {/* Ripetiamo la lista due volte per creare il loop infinito continuo */}
+          {[...clients, ...clients].map((client, idx) => (
+            <div key={idx} className="mx-12 flex-shrink-0 flex items-center justify-center">
+              <img 
+                src={client.logo} 
+                alt={client.name} 
+                title={client.name}
+                className="h-10 w-auto object-contain filter brightness-0 invert opacity-50 hover:opacity-100 transition-opacity" 
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <style>
