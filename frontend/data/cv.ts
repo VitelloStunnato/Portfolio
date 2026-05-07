@@ -109,6 +109,7 @@ export interface Certification {
   issuer: string;
   date: string;
   credlyUrl?: string;
+  imageUrl?: string;
 }
 
 export const certifications: Certification[] = [
@@ -117,6 +118,7 @@ export const certifications: Certification[] = [
     issuer: "Qlik / Credly",
     date: "February 2021 Release",
     credlyUrl: undefined, // aggiungere URL Credly se disponibile
+    imageUrl: "/logos/image.png",
   },
 ];
 
