@@ -30,35 +30,10 @@ export default function Hero() {
 
         {/* Tagline breve ricavata dal profilo */}
         <p className="max-w-2xl text-lg text-muted leading-relaxed">
-          BI Analyst &amp; Qlik Developer · Energy, Manufacturing &amp; Healthcare
+          BI Analyst &amp; Qlik Developer · Energy, Manufacturing &amp; Healthcare<br />
+          Appassionato di AI e costantemente attivo su progetti personali.
         </p>
 
-        {/* Call to action bottoni */}
-        <nav aria-label="Azioni principali" className="flex flex-wrap items-center gap-4 pt-4">
-          <a 
-            href={`mailto:${profile.email}`} 
-            id="hero-cta-email"
-            className="px-6 py-3 bg-primary hover:bg-primary-hover text-white font-medium rounded-md transition-colors"
-          >
-            Scrivimi una mail
-          </a>
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            id="hero-cta-linkedin"
-            className="px-6 py-3 bg-transparent border border-border hover:border-primary hover:text-primary font-medium rounded-md transition-colors"
-          >
-            LinkedIn
-          </a>
-        </nav>
-
-        {/* Info di contatto rapido */}
-        <address className="flex items-center gap-3 text-sm text-muted not-italic pt-4">
-          <span>{profile.location}</span>
-          <span aria-hidden="true" className="w-1 h-1 rounded-full bg-muted"></span>
-          <a href={`tel:${profile.phone}`} className="hover:text-primary transition-colors">{profile.phone}</a>
-        </address>
       </div>
 
       <div className="order-1 lg:order-2 w-full max-w-md mx-auto lg:max-w-full">

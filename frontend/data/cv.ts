@@ -9,6 +9,7 @@ export const profile = {
   email: "ballestrero.andrea93@gmail.com",
   linkedin: "https://www.linkedin.com/in/aballestrero",
   linkedinHandle: "aballestrero",
+  github: "https://github.com/VitelloStunnato",
   location: "Pero (MI), Italia",
   summary:
     "Senior BI Analyst & Qlik Developer con esperienza nello sviluppo di soluzioni di data visualization e reporting in ambiente Qlik Sense e QlikView. Esperto nella progettazione di dashboard interattive, automazione dei flussi informativi e analisi dei KPI aziendali per i settori Energy & Utilities, manifatturiero e medicale/sanitario. Orientato al miglioramento continuo e all'ottimizzazione dei processi decisionali basati sui dati.",
