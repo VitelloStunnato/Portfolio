@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #FF6A55;
+  --color-primary-hover: #FF8A75;
+  
+  --color-background: #1A1F26;
+  --color-surface: #212832;
+  --color-surface-l2: #2A323D;
+  
+  --color-foreground: #FFFFFF;
+  --color-muted: #A0A8B5;
+
+  /* Estendi utility per bordi e altro */
+  --color-border: var(--color-surface-l2);
+}
+
+/* Stili di base e reset per il dark theme nativo */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Utility generiche per il testo o per reset specifici */
+p {
+  color: var(--color-muted);
 }

@@ -8,14 +8,16 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <div className="min-h-screen bg-background">
       <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Certifications />
-      <Contact />
-    </main>
+      <main className="max-w-6xl mx-auto px-6 py-20 lg:py-32 space-y-32">
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Certifications />
+        <Contact />
+      </main>
+    </div>
   );
 }
