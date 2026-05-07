@@ -7,13 +7,16 @@ export default function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-32 space-y-16">
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
         
         {/* Colonna SX: Info e Testo */}
         <div className="space-y-8">
-          <div className="space-y-4">
-            <div className="w-12 h-1 bg-primary rounded-full"></div>
-            <h2 id="contact-heading" className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+          <div className="space-y-6">
+            <div className="flex items-center relative">
+              <div className="absolute right-full mr-6 w-[100vw] h-[2px] bg-primary"></div>
+              <span className="text-xl font-medium text-white tracking-wide">Contacts</span>
+            </div>
+            <h2 id="contact-heading" className="text-5xl md:text-6xl font-heading font-bold text-foreground leading-tight">
               Have a project?<br/>Let's talk!
             </h2>
             <p className="text-muted text-lg pt-2">

@@ -15,8 +15,8 @@ export default function Hero() {
         </p>
 
         {/* Riga decorativa + I'm Name */}
-        <div className="flex items-center gap-4 text-2xl md:text-3xl font-medium text-muted">
-          <div className="w-12 h-[2px] bg-primary"></div>
+        <div className="flex items-center relative text-2xl md:text-3xl font-medium text-muted">
+          <div className="absolute right-full mr-6 w-[100vw] h-[2px] bg-primary"></div>
           <p>I'm {firstName}</p>
         </div>
 

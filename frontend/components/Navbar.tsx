@@ -6,7 +6,7 @@ import { navigation, profile } from "@/data/cv";
 export default function Navbar() {
   return (
     <header id="navbar" role="banner" className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <nav aria-label="Navigazione principale" className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <nav aria-label="Navigazione principale" className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 h-24 flex items-center justify-between">
         {/* Logo / Nome testuale */}
         <a href="#hero" aria-label="Torna all'inizio" className="text-xl font-heading font-bold tracking-wide">
           {profile.name}

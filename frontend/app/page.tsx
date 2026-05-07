@@ -8,9 +8,9 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
-      <main className="max-w-6xl mx-auto px-6 py-20 lg:py-32 space-y-32">
+      <main className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 py-20 lg:py-32 space-y-32">
         <Hero />
         <About />
         <Experience />
