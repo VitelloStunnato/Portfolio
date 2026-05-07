@@ -1,7 +1,10 @@
 // components/Navbar.tsx
 // Barra di navigazione fissa con link alle sezioni del portfolio.
 
+"use client";
+
 import { navigation, profile } from "@/data/cv";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -56,10 +59,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA contatto rapido (opzionale sulla navbar, ma nel mockup c'è una lista di link. Usiamo i contatti in alto a destra) */}
-        <a href="#contact" id="navbar-cta" className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-surface border border-border rounded-md hover:border-primary hover:text-primary transition-all">
-          Contattami
-        </a>
+        {/* CTA contatto rapido + Theme Toggle */}
+        <div className="hidden md:flex items-center gap-3">
+          <a href="#contact" id="navbar-cta" className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-surface border border-border rounded-md hover:border-primary hover:text-primary transition-all">
+            Contattami
+          </a>
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   );

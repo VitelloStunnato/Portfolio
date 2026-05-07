@@ -5,7 +5,7 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Griglia a puntini (Dot Grid) in stile Tech/BI, svanisce dolcemente */}
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:32px_32px] [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)]"></div>
+      <div className="absolute inset-0 [background-size:32px_32px] [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)]" style={{ backgroundImage: `radial-gradient(var(--dot-color) 1px, transparent 1px)` }}></div>
 
       {/* Sfere sfocate animate (Aura / Mesh Gradient) */}
       <div className="orb orb-1"></div>
@@ -31,7 +31,7 @@ export default function AnimatedBackground() {
             left: -10%;
             width: 45vw;
             height: 45vw;
-            background: rgba(255, 46, 147, 0.25); 
+            background: var(--orb-1); 
             animation-delay: 0s;
           }
 
@@ -41,7 +41,7 @@ export default function AnimatedBackground() {
             right: -15%;
             width: 50vw;
             height: 50vw;
-            background: rgba(138, 43, 226, 0.15); 
+            background: var(--orb-2); 
             animation-delay: -7s;
           }
 
@@ -51,7 +51,7 @@ export default function AnimatedBackground() {
             left: 15%;
             width: 55vw;
             height: 55vw;
-            background: rgba(59, 130, 246, 0.15);
+            background: var(--orb-3);
             animation-delay: -14s;
           }
 

@@ -7,20 +7,53 @@
   --color-primary: #FF6A55;
   --color-primary-hover: #FF8A75;
   
-  --color-background: #1A1F26;
-  --color-surface: #212832;
-  --color-surface-l2: #2A323D;
+  --color-background: var(--bg);
+  --color-surface: var(--srf);
+  --color-surface-l2: var(--srf2);
   
-  --color-foreground: #FFFFFF;
-  --color-muted: #A0A8B5;
+  --color-foreground: var(--fg);
+  --color-muted: var(--mt);
 
   /* Estendi utility per bordi e altro */
-  --color-border: var(--color-surface-l2);
+  --color-border: var(--srf2);
 }
 
-/* Stili di base e reset per il dark theme nativo */
-:root {
+/* ===== DARK THEME (default) ===== */
+:root,
+.dark {
   color-scheme: dark;
+  --bg: #1A1F26;
+  --srf: #212832;
+  --srf2: #2A323D;
+  --fg: #FFFFFF;
+  --mt: #A0A8B5;
+
+  /* Colori Orb sfondo animato */
+  --orb-1: rgba(255, 46, 147, 0.25);
+  --orb-2: rgba(138, 43, 226, 0.15);
+  --orb-3: rgba(59, 130, 246, 0.15);
+  --dot-color: #ffffff15;
+}
+
+/* ===== LIGHT THEME ===== */
+.light {
+  color-scheme: light;
+  --bg: #F5F5F7;
+  --srf: #FFFFFF;
+  --srf2: #E8E8ED;
+  --fg: #1A1F26;
+  --mt: #6B7280;
+
+  /* Colori Orb sfondo animato (più soft per il chiaro) */
+  --orb-1: rgba(255, 106, 85, 0.15);
+  --orb-2: rgba(138, 43, 226, 0.08);
+  --orb-3: rgba(59, 130, 246, 0.08);
+  --dot-color: #00000012;
+}
+
+/* Transizione fluida tra i temi */
+body, body * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 body {
@@ -36,4 +69,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Utility generiche per il testo o per reset specifici */
 p {
   color: var(--color-muted);
+}
+
+/* Fix per i loghi nella marquee: in light mode non invertire */
+.light .logo-client {
+  filter: brightness(0) opacity(0.5) !important;
+}
+.dark .logo-client,
+:root:not(.light) .logo-client {
+  filter: brightness(0) invert(1) opacity(0.5) !important;
+}
+.logo-client:hover {
+  opacity: 1 !important;
+}
+
+/* Fix per testi hardcoded a text-white in light mode */
+.light .text-white {
+  color: var(--fg) !important;
 }

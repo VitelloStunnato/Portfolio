@@ -35,7 +35,7 @@ export default function ClientsMarquee() {
                 src={client.logo} 
                 alt={client.name} 
                 title={client.name}
-                className="h-10 w-auto object-contain filter brightness-0 invert opacity-50 hover:opacity-100 transition-opacity" 
+                className="h-10 w-auto object-contain logo-client transition-opacity" 
               />
             </div>
           ))}
